@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hodor-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: hodor
+  template:
+    metadata:
+      labels:
+        app: hodor
+    spec:
+      containers:
+      - name: hodor
+        image: <hodor-image>
+        ports:
+        - containerPort: 8080
+        env:
+        - name: ENV_VAR_1
+          value: "value1"
+        - name: ENV_VAR_2
+          value: "value2"
