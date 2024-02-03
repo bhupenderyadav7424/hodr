@@ -1,15 +1,3 @@
-# # Dockerfile for Hodor service
-# FROM golang:latest
-
-# WORKDIR /go/src/app
-# COPY . .
-
-# RUN go get -d -v ./...
-# RUN go install -v ./...
-
-# CMD ["app"]
-
-
 FROM golang:alpine
 
 # Set necessary environmet variables needed for our image
